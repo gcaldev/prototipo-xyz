@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+	<center><h2>Ingreso</h2></center>
+	{% if message %}
+	<center>
+		<ul class="feedbackPanel">
+			<li class="feedbackPanelERROR"><span class="feedbackPanelERROR">{{ message }}</span></li>
+		</ul>
+	</center>
+	{% endif %}
+	<form method="post" action="{{ url_for('web.login_submit') }}">
+		<center>
+			<table class="login">
+				<tr><th>Usuario</th><td><input type="text" name="usuario"></td></tr>
+				<tr><th>Clave</th><td><input type="password" name="clave"></td></tr>
+			</table>
+			<br style="line-height: 3px;"/>
+			<input class="center" type="submit" value="Entrar"/>
+		</center>
+	</form>
+{% endblock %}

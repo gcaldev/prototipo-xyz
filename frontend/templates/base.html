@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<head>
+		<title>Sistema Z - Expedientes</title>
+		<link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet"/>
+	</head>
+	<body>
+		<div class="container">
+			<table class="header">
+				<tr>
+					<td class="logoHeader"></td>
+					<td class="tituloHeader">Sistema Z - Expedientes</td>
+					{% if session.get('user') %}
+					<td class="userHeader">
+						<span class="header">
+							Usuario: <span>{{ session['user'] }}</span>&nbsp;|&nbsp;
+							<a class="action" href="{{ url_for('web.logout') }}">Salir</a>
+						</span>
+					</td>
+					{% else %}
+					<td class="finHeader">&nbsp;</td>
+					{% endif %}
+				</tr>
+			</table>
+			{% if session.get('user') %}
+			<div class="menuPrimario">
+				<ul>
+					<li{% if request.endpoint and request.endpoint.startswith('search.') %} class="selected"{% endif %}><a href="{{ url_for('search.search') }}"><span>Buscar expediente</span></a></li><li{% if request.endpoint and request.endpoint.startswith('registration.') %} class="selected"{% endif %}><a href="{{ url_for('registration.register') }}"><span>Registrar expediente</span></a></li>
+				</ul>
+			</div>
+			{% else %}
+			<div class="barraMenuLong"></div>
+			{% endif %}
+			{% block content %}{% endblock %}
+			<br/>
+		</div>
+		<div class="footer">
+			<center><b><i>Sistema Z - Expedientes :: XY @ 2010</i></b></center>
+		</div>
+	</body>
+</html>

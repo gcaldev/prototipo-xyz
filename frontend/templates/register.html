@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+	<br/><br/>
+	<center>
+		<form method="post" action="{{ url_for('registration.register_submit') }}">
+			<table class="contenido">
+				<tr><th>Título*</th><td><input type="text" size="50" name="titulo"></td></tr>
+				<tr><th>Cuerpo*</th><td><textarea cols="50" rows="6" name="cuerpo"></textarea></td></tr>
+			</table>
+			<br style="line-height: 3px;"/>
+			<input type="submit" value="Registrar"/>
+		</form>
+	</center>
+	{% if message %}
+	<ul class="feedbackPanel">
+		<li class="feedbackPanelINFO"><span class="feedbackPanelINFO">{{ message }}</span></li>
+	</ul>
+	{% endif %}
+	{% if error %}
+	<ul class="feedbackPanel">
+		<li class="feedbackPanelERROR"><span class="feedbackPanelERROR">{{ error }}</span></li>
+	</ul>
+	{% endif %}
+{% endblock %}

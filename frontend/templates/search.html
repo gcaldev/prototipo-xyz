@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block content %}
+	<br/>
+	<span>Se permite buscar expedientes por su código, por ejemplo <i>EXP-12</i></span>
+	<br/><br/>
+	<center>
+		<form method="post" action="{{ url_for('search.search_submit') }}">
+			<table class="contenido">
+				<tr><th>Código de expediente</th><td><input type="text" size="8" name="codigoExpediente"></td></tr>
+			</table>
+			<br style="line-height: 3px;"/>
+			<input type="submit" value="Buscar"/>
+		</form>
+	</center>
+	{% if message %}
+	<ul class="feedbackPanel">
+		<li class="feedbackPanelERROR"><span class="feedbackPanelERROR">{{ message }}</span></li>
+	</ul>
+	{% elif record %}
+	<center>
+		<table class="contenido">
+			<tr><th>Número</th><td>{{ record.number }}</td></tr>
+			<tr><th>Fecha creación</th><td>{{ record.createdOn }}</td></tr>
+			<tr><th>Responsable</th><td>{{ record.owner }}</td></tr>
+			<tr><th>Título</th><td>{{ record.title }}</td></tr>
+			<tr><th>Cuerpo</th><td>{{ record.body }}</td></tr>
+		</table>
+	</center>
+	{% endif %}
+{% endblock %}

@@ -1,0 +1,499 @@
+body {
+	font-family: sans-serif, monospace;
+	font-size: 11px;
+	background-color: #EEEEEE;
+}
+
+/** TITULOS       */
+/******************/
+h2 {
+	margin-top: 10px;
+	margin-bottom: 5px;
+	font-size: 13px;
+	color: #0055CC;
+}
+
+h3 {
+	margin-top: 10px;
+	margin-bottom: 5px;
+	font-size: 12px;
+	color: #0055CC;
+}
+
+h5 {
+	font-size: 12px;
+}
+
+
+
+/** DIVS y SPANS        */
+/******************/
+
+div {
+	margin: 0px;
+	padding: 0px;
+}
+
+.container {
+	margin-left: auto;
+	margin-right: auto;
+	padding: 5px;
+	width: 700px;
+	height: 100%;
+	min-height: 500px;
+	background-color: white;
+	border-left: 2px solid #DDDDDD;
+	border-right: 2px solid #DDDDDD;
+	/*border-top: 2px solid #DDDDDD;*/
+}
+
+.footer {
+	margin-left: auto;
+	margin-right: auto;
+	padding: 5px;
+	width: 700px;
+	height: 10px;
+	background: url("../images/style/footer.png") repeat-x top;
+	border-left: 2px solid #DDDDDD;
+	border-right: 2px solid #DDDDDD;
+	border-bottom: 2px solid #DDDDDD;
+	color: #888888;
+	vertical-align: middle;
+	font-size: 90%;
+}
+
+table.header {
+	width: 100%;
+	border-spacing: 0px;
+}
+
+.logoHeader {
+	height: 48px;
+	width: 150px;
+	background: url("../images/style/logo.png") left repeat-y;
+}
+
+.userHeader {
+	background: url("../images/style/fondo.png") repeat-x;
+	height: 48px;
+	padding-right: 5px;
+	line-height: 20px;
+	text-align: right;         
+}
+
+.tituloHeader {
+	background: url("../images/style/fondo.png") repeat-x;
+	height: 48px;
+	width: 380px;
+	font-size: 200%;
+	color: #028BD5;
+	font-weight: bold;
+	line-height: 20px;
+	text-align: center;         
+}
+
+.finHeader {
+	background: url("../images/style/fondo.png") repeat-x;
+	height: 48px;
+	font-size: 200%;
+	color: #028BD5;
+	font-weight: bold;
+	line-height: 20px;
+	text-align: center;         
+}
+
+.barraMenuLong {
+	margin-left: auto;
+	margin-right: auto;
+	background: url("../images/style/tab_bg.png") repeat-x bottom;
+	height: 20px;
+	width: 100%;
+}
+
+/* MENU GENERAL ********************************************************/
+.menuPrimario { 
+	width: 690px;
+	padding: 0px 5px 0px 5px;
+	height: 26px;
+	background: url("../images/style/tab_bg.png") repeat-x bottom;
+}
+      
+.menuPrimario ul {
+	margin: 0px;
+	list-style: none;
+}
+      
+.menuPrimario li {
+	top: 8px;
+	position: relative;
+	font-size: 90%;
+	padding: 2px;
+	display: inline;
+}
+
+.menuPrimario a {
+	background: url("../images/style/tab.png") no-repeat bottom;
+	text-decoration: none;
+	padding: 5px;
+	font-weight: bold;
+	color: white;
+}
+      
+.menuPrimario a:hover {
+	color: black;
+}
+
+.menuPrimario li.selected a {
+	background: url("../images/style/tab_selected.png") repeat;
+	padding: 6px;
+	color: black;
+	border-left: 1px solid #BBBBBB;
+	border-right: 1px solid #BBBBBB;
+	border-top: 1px solid #BBBBBB;
+}
+
+/* OTROS DIV ************************************************************************/
+
+div.centro {
+	text-align: center;
+}
+
+
+div li.feedbackPanelERROR { 
+	color: red;
+	float: none;
+	bottom:0%;
+	position: relative; 
+	margin:0px 0px 0px 0px;
+}
+
+div li.feedbackPanelINFO { 
+	color: green;
+	float: none;
+	bottom:0%;
+	position: relative; 
+	margin:0px 0px 0px 0px;
+}
+
+/** TABLA         */
+/******************/
+table.login {
+	border-width: 1px;
+	border-spacing: 2px;
+	border-style: solid;
+	border-color: white;
+	border-collapse: separate;
+	background-color: white;
+	margin-bottom: 0px;
+}
+
+table.contenido {
+	border-width: 1px;
+	width: 400px;
+	border-spacing: 2px;
+	border-style: solid;
+	border-color: white;
+	border-collapse: separate;
+	background-color: white;
+	margin-bottom: 0px;
+}
+
+table.contenido th.center {
+	text-align: center;
+	font-size: 105%;
+	font-style: bold;
+	vertical-align: 50%;
+}
+
+td.separador {
+	align: center;
+	background: url("../images/style/separador.png") no-repeat center;
+}
+
+td {
+	padding: 1px;
+	text-align: left;
+}
+
+td.center {
+	text-align: center;
+}
+
+th {
+	border-style: solid;
+	border-color: #DDDDDD;
+	border-width: 1px;
+	color: #111111;
+	height: 20px;
+	background: #F1F8FF;
+	text-align: left;
+}
+
+
+table.dataview {
+	border-width: 1px;
+	width: 700px;
+	border-spacing: 0px;
+	border-style: hidden;
+	background-color: white;
+}
+
+
+table.dataview tr.headers th {
+	border: 0px;
+	border-bottom: 1px solid #CCCCCC;
+	padding: 2px;
+	color: #111111;
+	text-align: center;
+	background: #F1F8FF;
+}
+
+
+table.dataview tr.even td {
+	border: 0px;
+	text-align: center;
+	border-bottom: 2px solid #EEEEEE;
+	padding: 2px;
+}
+
+table.dataview tr.odd td {
+	border:  0px;
+	text-align: center;
+	border-bottom: 2px solid #EEEEEE;
+	padding: 2px;
+}
+
+table.dataview tr td.titulo {
+	width: 400px;
+	text-align: left;
+	padding-left: 10px;
+}
+
+table.dataview tr td.prioridad {
+	text-align: left;
+	width: 60px;
+}
+
+table.dataview tr td.id{
+	width: 45px;
+}
+
+table.dataview tr td.estado {
+	width: 80px;
+}
+
+table.dataview tr td.categoria {
+	width: 80px;
+}
+
+table.dataview tr.navigation td {
+	border-style: hidden;
+}
+
+table.adminEntidad {
+	border-width: 1px;
+	min-width: 350px;
+	border-spacing: 0px;
+	border-style: hidden;
+	background-color: white;
+}
+
+
+table.adminEntidad tr.headers th {
+	border: 0px;
+	border-bottom: 1px solid #CCCCCC;
+	padding: 2px;
+	color: #111111;
+	text-align: center;
+	background: #F1F8FF;
+}
+
+
+table.adminEntidad tr.even td {
+	border: 0px;
+	text-align: center;
+	border-bottom: 2px solid #EEEEEE;
+	padding: 2px;
+}
+
+table.adminEntidad tr.odd td {
+	border:  0px;
+	text-align: center;
+	border-bottom: 2px solid #EEEEEE;
+	padding: 2px;
+}
+
+table.adminEntidad tr.navigation td {
+	border-style: hidden;
+}
+
+
+/** OTROS         */
+/******************/
+input.submit {
+	background-color: green;
+}
+
+.feedbackPanelERROR {
+	color: red;
+	list-style:none;
+}
+
+.feedbackPanelINFO { 
+	color: green;
+	list-style: none;
+}
+
+input { 
+	font-family: sans-serif; 
+	font-size: 11px;
+}
+
+select { 
+	font-family: sans-serif; 
+	font-size: 11px;
+}
+
+textarea { 
+	font-family: sans-serif; 
+	font-size: 11px;
+}
+
+.sans-serif {
+	font-family: sans-serif;
+	font-size: 11px;;
+}
+
+span.right {
+	float: right;
+	position: relative; 
+	bottom: 12px;
+	padding: 4px;
+	font-weight: bold;
+}
+
+span.left {
+	float: left;
+	position: relative; 
+}
+
+span.mini {
+	vertical-align: 20%;	
+}
+
+span.vmiddle {
+	vertical-align: 30%;
+}
+
+a.action {
+	float: none; 
+	display:inline;
+	padding: 0px;
+	margin: 0px;
+	border: 0px solid;
+	background: none;
+	text-decoration: none;
+	font-weight: normal;
+	color: blue;
+	position: relative; 
+}
+
+a.action:hover {
+	color: red;
+}
+
+
+a.wicket_orderNone {
+	float: none; 
+	display:inline;
+	padding: 0px;
+	margin: 0px;
+	border: 0px solid;
+	text-decoration: none;
+	font-weight: normal;
+	color: blue;
+	position: relative; 
+	font-family: sans-serif, monospace;
+	font-size: 11px;
+}
+
+a.wicket_orderNone:hover {
+	color: red;
+}
+
+a.wicket_orderUp {
+	float: none; 
+	display:inline;
+	padding: 0px;
+	margin: 0px;
+	border: 0px solid;
+	text-decoration: none;
+	font-weight: bold;
+	color: blue;
+	position: relative; 
+	font-family: sans-serif, monospace;
+	font-size: 11px;
+}
+
+a.wicket_orderUp:hover {
+	color: red;
+}
+
+a.wicket_orderDown {
+	float: none; 
+	display:inline;
+	padding: 0px;
+	margin: 0px;
+	border: 0px solid;
+	text-decoration: none;
+	font-weight: bold;
+	color: blue;
+	position: relative; 
+	font-family: sans-serif, monospace;
+	font-size: 11px;
+}
+
+a.wicket_orderDown:hover {
+	color: red;
+}
+
+img {
+	border:0;
+}
+
+img.mini {
+	vertical-align: 5%;	
+}
+
+img.middle {
+	vertical-align: -10%;	
+}
+
+div.wicket-aa {
+	background-color: white;
+	border-width: 1px;
+	border-color: #cccccc;
+	border-style: solid;
+	padding: 1px;
+	margin: 1px 0 0 0;
+	text-align:left;
+}
+
+div.wicket-aa ul { 
+	list-style:none; 
+	padding: 2px; 
+	margin:0; 
+}
+
+div.wicket-aa ul li.selected { 
+	background-color:#1199FF ; 
+	padding: 2px; 
+	margin:0; 
+}
+
+.header {
+	font-weight: normal;
+	color: #444444;
+}
+
+
