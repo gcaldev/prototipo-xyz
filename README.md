@@ -1,10 +1,14 @@
 # Prototipo Sistema Z
 
 ## Propuesta
-El prototipo agrega validaciones para eliminar las debilidades detectadas relacionadas al control de accesos. Cada usuario únicamente tiene acceso a los expedientes en los que participa. Para lograr esto se identifica a la persona que esta operando (autenticación) por medio de la cookie de sesión y se valida que pueda acceder al expediente consultado (autorización).
+El prototipo agrega validaciones para eliminar las debilidades detectadas relacionadas al control de accesos. Cada usuario únicamente tiene acceso a los expedientes en los que participa. 
+
+Para lograr esto se identifica a la persona que esta operando (autenticación) por medio de la cookie de sesión y se valida que pueda acceder al expediente consultado (autorización).
+
 Se divide el proyecto en 2 aplicaciones:
     - Servicio frontend: Servidor Flask que resuelve la interfaz que verá el cliente, asocia cookie de sesión al momento de ingresar, lo controla en cada llamado y propaga un contexto firmado al servidor interno.
     - Servicio backend: Servidor Flask que valida qué recurso es accesible por el usuario del contexto. A su vez, implementa el logging de auditoría ante cada operación ejecutada.
+
 Adicionalmente, las contraseñas almacenadas quedan en Argon2id a diferencia del Aplicativo original donde se almacenaban en texto plano.
 Queda fuera del prototipo la configuración de permisos de distintas tablas. La base de datos utilizada no tiene este tipo de configuración y es usada únicamente por simplicidad. Administración de participación por roles a definir junto a XY, no contemplado en el prototipo.
 
